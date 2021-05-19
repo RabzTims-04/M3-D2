@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -163,11 +162,12 @@
           </p>
           <input class="form-control mb-2 search-input" id="input" type="text" placeholder="Search..." aria-label="default input example">
           <p>
-            <a href="#" class="btn btn-primary my-2">Load Images</a>
-            <a href="#" class="btn btn-secondary my-2 " onclick="loadSecondary()">Load Secondary Images</a>
-            <div id="error">
 
-            </div>
+           
+
+            <a href="#" onclick=" laptopImg()" class="btn btn-primary my-2">Load Images</a>
+            <a href="#" onclick=" flowerImg()" class="btn btn-secondary my-2">Load Secondary Images</a>
+
           </p>
         </div>
       </section>
@@ -177,6 +177,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -194,6 +195,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -205,6 +209,7 @@
                   >
                     <div class="btn-group">
                       <button
+                      id=0
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
                       >
@@ -224,6 +229,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner">
 
                 </div>
@@ -243,6 +249,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -273,6 +282,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -290,6 +300,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -321,6 +334,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -338,6 +352,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -368,6 +385,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -385,6 +403,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -415,6 +436,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -432,6 +454,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -463,6 +488,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -480,6 +506,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -510,6 +539,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -527,6 +557,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -557,6 +590,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
+
                 <div class="image-conatiner"></div>
                 <svg
                   class="bd-placeholder-img card-img-top"
@@ -574,6 +608,9 @@
                     Thumbnail
                   </text>
                 </svg>
+
+                <img src="" alt="">
+
                 <div class="card-body">
                   <p class="card-text">
                     This is a wider card with supporting text below as a natural
@@ -607,6 +644,27 @@
       </div>
     </main>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary closebutton" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
@@ -618,6 +676,7 @@
         </p>
       </div>
     </footer>
+    <script src="script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -628,6 +687,10 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+
     <script src="script.js"></script>
+
+  
+
   </body>
 </html>
