@@ -1,5 +1,3 @@
- 
-  
 
 const laptopImg = function(){
 fetch("http://www.splashbase.co/api/v1/images/search?query=laptop" )
@@ -31,6 +29,7 @@ fetch("http://www.splashbase.co/api/v1/images/search?query=laptop" )
            console.log(e.target.id, currentId)
            let currentImg = laptop.images.filter((laptop_image)=> laptop_image === currentId)
            currentImg = currentImg.url */
+           modalImg.src ="" 
            modalImg.src = currentCardImage.src 
            
         })
@@ -38,6 +37,11 @@ fetch("http://www.splashbase.co/api/v1/images/search?query=laptop" )
         /* let currentImg = laptop.images.filter((laptop_image)=> laptop_image.id === id)[0]
         currentImg = currentImg.url
         console.log(currentImg) */
+        modalBody.appendChild(modalImg)
+        let closebutton = document.querySelector('.closebutton')
+        closebutton.addEventListener('click', function(e){
+            modalImg.src =""
+        })
         
         smallString[i].innerText = laptop.images[i].id
        
@@ -71,27 +75,33 @@ const flowerImg = function(){
              viewButton[i].setAttribute("id", `${flower.images[i].id}`)       
              let modalImg = document.createElement('img')
              modalImg.classList.add('img-fluid')
-             let currentImg = flower.images.filter((flower_image)=> flower_image.id === id)[0]
+             viewButton[i].addEventListener('click', function(e){
+                let currentId =  e.currentTarget
+                let currentCard = currentId.closest('.card')
+                let currentCardImage = currentCard.querySelector('img')
+               
+                modalImg.src = currentCardImage.src 
+                       
+        })
+         
+        modalBody.appendChild(modalImg)
+        let closebutton = document.querySelector('.closebutton')
+        closebutton.addEventListener('click', function(e){
+             modalImg.src =""
+        })
+
+     /*      let currentImg = flower.images.filter((flower_image)=> flower_image.id === id)[0]
              currentImg = currentImg.url             
-             modalImg.src = currentImg
-             modalBody.appendChild(modalImg)
+             modalImg.src = currentImg */
+             
              smallString[i].innerText = flower.images[i].id 
-             
-             
-    }
+    }    
     })
     .catch(err => {
         console.error(err);
     })
 }
 
-
-
-window.onload = function(){
-
-  
-   
-}
 
 
 
