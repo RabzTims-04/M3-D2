@@ -1,11 +1,11 @@
 
     let modalImg = document.createElement('img')
     modalImg.classList.add('img-fluid') 
-   let closebutton = document.querySelector('.closebutton')
+ /*    let closebutton = document.querySelector('.closebutton')
    closebutton.addEventListener('click', function(e){
     modalImg.src.remove()
-}) 
-
+})  
+ */
 const laptopImg = function(){
 fetch("http://www.splashbase.co/api/v1/images/search?query=laptop")
 .then((response) => response.json())
@@ -36,10 +36,6 @@ fetch("http://www.splashbase.co/api/v1/images/search?query=laptop")
     })
           
  modalBody.appendChild(modalImg)
-   let closebutton = document.querySelector('.closebutton')
-   closebutton.addEventListener('click', function(e){
-     modalImg.src.remove()
-}) 
 })
 .catch(err => {
     console.error(err);
@@ -89,9 +85,7 @@ else {
              viewButton[i].setAttribute("data-target", "#exampleModal")
              viewButton[i].setAttribute("id", `${flower.images[i].id}`)          
              smallString[i].innerText = flower.images[i].id 
-        }
-
-      
+        } 
         viewButton.forEach((viewbtn)=>{
             viewbtn.addEventListener('click',(e)=>{
                 let currentId =  e.currentTarget
@@ -99,14 +93,8 @@ else {
                 let currentCardImage = currentCard.querySelector('img')  
                 modalImg.src = currentCardImage.src  
             })
-        })
-              
-     modalBody.appendChild(modalImg)
-       let closebutton = document.querySelector('.closebutton')
-       closebutton.addEventListener('click', function(e){
-         modalImg.src.remove()
-   }) 
-          
+        })              
+     modalBody.appendChild(modalImg)     
     })
     .catch(err => {
         console.error(err);
