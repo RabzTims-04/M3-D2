@@ -1,5 +1,4 @@
 const loadSecondary = () =>{
-   
     let search = document.querySelector(".search-input").value;
     if(search.length != 0){
         fetch(`http://www.splashbase.co/api/v1/images/search?query="+${search}`)
@@ -16,19 +15,22 @@ const loadSecondary = () =>{
                 
                 img.classList.add("img-fluid");
                 img.src  = image.url;
-
+                
+                container[i].innerHTML = " "
                 container[i].appendChild(img);
                 document.querySelectorAll(".card-img-top")[i].style.display = "none"
+                
                 // cards[i].appendChild("container");
                 
                 
             }
+          
+
+        }).catch((err)=>{
 
         })
-        search = " "
     }
-   
-   
+    
 }
 
 

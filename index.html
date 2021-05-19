@@ -161,10 +161,13 @@
             This page will dynamically load pictures from the web, and display
             them in a cool way!
           </p>
-          <input class="form-control mb-2 search-input" type="text" placeholder="Search..." aria-label="default input example">
+          <input class="form-control mb-2 search-input" id="input" type="text" placeholder="Search..." aria-label="default input example">
           <p>
             <a href="#" class="btn btn-primary my-2">Load Images</a>
             <a href="#" class="btn btn-secondary my-2 " onclick="loadSecondary()">Load Secondary Images</a>
+            <div id="error">
+
+            </div>
           </p>
         </div>
       </section>
@@ -222,7 +225,7 @@
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <div class="image-conatiner">
-                  
+
                 </div>
                 <svg
                   class="bd-placeholder-img card-img-top"
