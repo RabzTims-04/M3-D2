@@ -23,12 +23,15 @@ fetch("http://www.splashbase.co/api/v1/images/search?query=laptop" )
         let modalImg = document.createElement('img')
         modalImg.classList.add('img-fluid')
         viewButton[i].addEventListener('click', function(e){
-           let currentId =  e.target.id
-           console.log(e);
+           let currentId =  e.currentTarget
+           let currentCard = currentId.closest('.card')
+           let currentCardImage = currentCard.querySelector('img')
+
+          /*  console.log(e);
            console.log(e.target.id, currentId)
-           let currentImg = laptop.images.filter((laptop_image)=> laptop_image === e.target.id)
-           currentImg = currentImg.url
-           modalImg.src = currentImg
+           let currentImg = laptop.images.filter((laptop_image)=> laptop_image === currentId)
+           currentImg = currentImg.url */
+           modalImg.src = currentCardImage.src 
            
         })
         modalBody.appendChild(modalImg)
